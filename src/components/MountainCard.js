@@ -16,7 +16,7 @@ function MountainCard({handleDisplayMountainDetail}) {
 
 
     return (
-        <Card >
+        <Card className="mt-3" style={{backgroundColor:"#dee2e6"}} >
             <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>

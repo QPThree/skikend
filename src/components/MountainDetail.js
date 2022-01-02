@@ -5,13 +5,16 @@ import { Card } from 'react-bootstrap'
 function MountainDetail({ data }) {
 
     useEffect(() => {
-        console.log(data)
+       
     }, [])
 
     const renderCards = () => {
         const cards = data.forecast.map((day, indx) => {
-
-            return (<Card className="shadow p-3 mb-5 bg-white rounded">
+            let year = day.date.slice(-4)
+            let month = day.date.slice(3,5)
+            let d = day.date.slice(0,2)
+            let date = new Date(year,month -1,d)
+            return (<Card className="shadow p-3 mb-5 rounded" style={{backgroundColor:"#dee2e6"}} key={indx}>
                 <Card.Title>{day.base.wx_desc}</Card.Title>
                 <Card.Body>
                     Time: {day.time}
@@ -24,8 +27,8 @@ function MountainDetail({ data }) {
                     <br/>
                     Visibility: {day.vis_mi} miles
                 </Card.Body>
-                <Card.Footer>
-                    {day.date}
+                <Card.Footer style={{backgroundColor:"#3d405b", color:"#fff"}}>
+                    {date.toDateString()}
                 </Card.Footer>
             </Card>)
 
@@ -35,7 +38,7 @@ function MountainDetail({ data }) {
 
     return (
         <>
-            {data.name}
+           <h3 style={{fontFamily:"Moon Dance", color:"#343a40"}}> {data.name}</h3>
             {renderCards()}
         </>
     )

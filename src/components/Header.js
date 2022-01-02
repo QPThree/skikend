@@ -8,8 +8,8 @@ function Header() {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="/">Skikend</Navbar.Brand>
+        <Navbar style={{backgroundColor: "#adb5bd"}} expand="lg">
+            <Navbar.Brand href="/" style={{fontFamily: 'Staatliches', color:"#e07a5f", fontSize:"2em"}}>Skikend</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
