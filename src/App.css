@@ -30,3 +30,21 @@ body{
 .App-link {
   color: #61dafb;
 }
+.detailCardTitle{
+  text-align: right;
+  margin-bottom: 0;
+}
+.smallText{
+  font-size:.75em;
+  font-weight: 100;
+}
+/* Mountain detail progress bars */
+.bg-progress{
+  background-color: #f2cc8f;
+  color:black;
+}
+
+.progress-bar{
+  overflow: visible !important;
+  text-align: left;
+}
