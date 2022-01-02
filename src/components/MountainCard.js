@@ -7,7 +7,7 @@ function MountainCard({handleDisplayMountainDetail}) {
     const [data, setData] = useState({})
 
     useEffect(() => {
-        axios.get('http://api.weatherunlocked.com/api/resortforecast/206004?hourly_interval=12&app_id=766a53bd&app_key=d03176b103f8fcc5de1293561dcfd2bf', {
+        axios.get('https://api.weatherunlocked.com/api/resortforecast/206004?hourly_interval=12&app_id=766a53bd&app_key=d03176b103f8fcc5de1293561dcfd2bf', {
             headers: {
                 Accept: "application/json",
             }
