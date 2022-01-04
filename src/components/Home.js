@@ -9,7 +9,6 @@ function Home() {
     const [mountainDetailData, setMountainDetailData] = useState({})
 
     const handleDisplayMountainDetail = (data) => {
-        console.log("change")
         setDisplayMountainDetail(!displayMountainDetail)
         setMountainDetailData(data)
     }
